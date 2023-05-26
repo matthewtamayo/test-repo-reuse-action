@@ -4,14 +4,12 @@ on:
   workflow_dispatch:
   
 jobs:
-  pass-data:
-    uses: matthewtamayo/sample-action@main
-    with:
-      messsage: "hello"
-
   print:
     runs-on: ubuntu-latest
     steps:
+      - uses: matthewtamayo/sample-action@main
+        with:
+          messsage: "hello"
       - name: show repo
         shell: bash
         run: echo "good"
