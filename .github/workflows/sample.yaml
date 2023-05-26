@@ -4,10 +4,6 @@ on:
   workflow_dispatch:
   
 jobs:
-  print:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: matthewtamayo/sample-action@main
-      - name: show repo
-        shell: bash
-        run: echo "good"
+  pass-data:
+    uses: matthewtamayo/sample-action/.github/workflows/reuse-wf.yaml@main
+    secrets: inherit
