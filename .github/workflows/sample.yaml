@@ -7,9 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print
-        uses: matthewtamayo/sample-action@d6fba00
+        uses: matthewtamayo/sample-action@d6fba00013a5af9f04192c19a81e171e669d72d2
         with:
           messsage: "hello"
+        # secrets: inherit
 
       - name: show repo
         shell: bash
