@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: matthewtamayo/sample-action@main
-        with:
-          messsage: "hello"
       - name: show repo
         shell: bash
         run: echo "good"
