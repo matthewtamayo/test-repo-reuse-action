@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print
-        uses: matthewtamayo/sample-action
+        uses: matthewtamayo/sample-action@d6fba00
         secrets: inherit
         with:
           message : "hello"
