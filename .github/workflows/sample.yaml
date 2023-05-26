@@ -9,12 +9,12 @@ jobs:
       - name: print
         uses: matthewtamayo/sample-action@d6fba00
         with:
-          message : "hello"
+          message: "hello"
         secrets: inherit
-        
+
       - name: show repo
         shell: bash
         run: |
-            chmod +x ./gh-rest-script.sh
+          chmod +x ./gh-rest-script.sh
         env:
-            TOKEN: ${{ SECRETS.TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}
