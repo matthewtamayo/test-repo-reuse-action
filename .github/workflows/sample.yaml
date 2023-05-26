@@ -1,0 +1,19 @@
+name: CDO-PR-GENERATOR
+
+on:
+  workflow_dispatch:
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        uses: matthewtamayo/sample-action
+        secrets: inherit
+        with:
+          message : "hello"
+      - name: show repo
+        shell: bash
+        run: |
+            chmod +x ./gh-rest-script.sh
+        env:
+            TOKEN: ${{ SECRETS.TOKEN }}
