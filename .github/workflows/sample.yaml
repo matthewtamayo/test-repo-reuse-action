@@ -1,19 +1,17 @@
-name: CDO-PR-GENERATOR
+name: Token
 
 on:
   workflow_dispatch:
+  
 jobs:
+  pass-data:
+    uses: matthewtamayo/sample-action@main
+    with:
+      messsage: "hello"
+
   print:
     runs-on: ubuntu-latest
     steps:
-      - name: print
-        uses: matthewtamayo/sample-action@d6fba00013a5af9f04192c19a81e171e669d72d2
-        # secrets: inherit
-        with:
-          messsage: "hello"
-        
-
       - name: show repo
         shell: bash
-        run: |
-          echo "${{ secrets.TOKEN }}"
+        run: echo "good"
