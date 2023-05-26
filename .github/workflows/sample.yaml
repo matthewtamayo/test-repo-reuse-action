@@ -8,9 +8,10 @@ jobs:
     steps:
       - name: print
         uses: matthewtamayo/sample-action@d6fba00
-        secrets: inherit
         with:
           message : "hello"
+        secrets: inherit
+        
       - name: show repo
         shell: bash
         run: |
